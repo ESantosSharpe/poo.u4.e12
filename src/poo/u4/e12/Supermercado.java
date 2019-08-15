@@ -26,15 +26,20 @@ public class Supermercado {
     }
 
     public void ticket(){
-        for (int i = 0; i < compra.size(); i++) {
+            double precioFinal=0;
+            for (int i = 0; i < compra.size(); i++) {
             Compra aux=compra.get(i);
             String nombre=aux.getNombre();
             double precio=aux.getPrecio();
             int cantidad=aux.getCantidad();
             double total=precio*cantidad;
+            total=Math.floor(total*100)/100;
             System.out.println("***************Cantidad***Precio*****Total");
             System.out.println(nombre+"             "+cantidad+"   "+precio+"      "+total);
+            precioFinal+=total;
         }
+            precioFinal=Math.floor(precioFinal*100)/100;
+        System.out.println("Precio final                         "+precioFinal);
     }
 
 }
