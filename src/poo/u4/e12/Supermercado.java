@@ -27,7 +27,7 @@ public class Supermercado {
 
     public void ticket(){
             double precioFinal=0;
-            System.out.println("***************Cantidad***Precio*****Total");
+            System.out.println("************************Cantidad********Precio**Total");
             for (int i = 0; i < compra.size(); i++) {
             Compra aux=compra.get(i);
             String nombre=aux.getNombre();
@@ -35,11 +35,11 @@ public class Supermercado {
             int cantidad=aux.getCantidad();
             double total=precio*cantidad;
             total=Math.floor(total*100)/100;
-            System.out.println(nombre+"             "+cantidad+"   "+precio+"      "+total);
+            System.out.println(nombre+"\t\t"+cantidad+"\t\t"+precio+"\t"+total);
             precioFinal+=total;
         }
             precioFinal=Math.floor(precioFinal*100)/100;
-        System.out.println("Precio final                         "+precioFinal);
+        System.out.println("Precio final\t\t\t\t\t"+precioFinal);
     }
 
 }
